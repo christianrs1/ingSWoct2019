@@ -22,7 +22,8 @@ public class MetodoPasajero {
     public void guardarArchivoPasajero(Pasajero pasajero){
         
         try {
-            FileWriter fw = new FileWriter ("C:\\Pasajero.txt", true);
+            //FileWriter fw = new FileWriter ("C:\\Pasajero.txt", true);
+            FileWriter fw = new FileWriter ("D:\\utpl\\Ingenieria de software\\ProyectVentaBoletos\\Pasajero.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             pw.print(pasajero.getNombre_pasajero());
@@ -49,7 +50,8 @@ public class MetodoPasajero {
         DefaultTableModel mdlTablaP = new DefaultTableModel(cabeceras,0);
         try {
      
-            FileReader fr = new FileReader("C:\\Pasajero.txt");
+            //FileReader fr = new FileReader("C:\\Pasajero.txt");
+            FileReader fr = new FileReader("D:\\utpl\\Ingenieria de software\\ProyectVentaBoletos\\Pasajero.txt");
             BufferedReader br = new BufferedReader(fr);
             String d;
 
@@ -70,7 +72,8 @@ public class MetodoPasajero {
   
     public Vector BuscarPasajero(String cedulaP){
         try {
-            FileReader fr = new FileReader("C:\\Pasajero.txt");
+            //FileReader fr = new FileReader("C:\\Pasajero.txt");
+            FileReader fr = new FileReader("D:\\utpl\\Ingenieria de software\\ProyectVentaBoletos\\Pasajero.txt");
             BufferedReader br = new BufferedReader(fr);
             String d;
             while ((d=br.readLine())!=null){
